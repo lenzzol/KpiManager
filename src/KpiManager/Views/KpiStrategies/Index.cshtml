@@ -1,0 +1,77 @@
+@model IEnumerable<KpiManager.KpiStrategy>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.CreatedBy)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CreatedDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Description)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.IsSystem)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ModifiedBy)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ModifiedDate)
+                </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Kpi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pointofsale)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedBy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsSystem)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ModifiedBy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ModifiedDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Kpi.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pointofsale.PointofsaleId)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.KpiStrategyId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.KpiStrategyId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.KpiStrategyId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

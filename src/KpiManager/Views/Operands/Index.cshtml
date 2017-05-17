@@ -1,0 +1,71 @@
+@model IEnumerable<KpiManager.Operand>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.CreatedBy)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CreatedDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ModifiedBy)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ModifiedDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.OperandValue)
+                </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OperandDataField)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OperandDataType)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedBy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ModifiedBy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ModifiedDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OperandValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OperandDataField.DataFieldName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OperandDataType.DataType1)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.OperandId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.OperandId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.OperandId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

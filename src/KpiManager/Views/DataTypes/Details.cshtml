@@ -1,0 +1,60 @@
+@model KpiManager.DataType
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>DataType</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedBy)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CreatedBy)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CreatedDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DataType1)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DataType1)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FloatPrecision)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FloatPrecision)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IsNumeric)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IsNumeric)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ModifiedBy)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ModifiedBy)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ModifiedDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ModifiedDate)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.DataTypeId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

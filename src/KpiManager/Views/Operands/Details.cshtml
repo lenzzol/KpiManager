@@ -1,0 +1,60 @@
+@model KpiManager.Operand
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Operand</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedBy)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CreatedBy)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CreatedDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ModifiedBy)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ModifiedBy)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ModifiedDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ModifiedDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.OperandValue)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.OperandValue)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.OperandDataField)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.OperandDataField.DataFieldName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.OperandDataType)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.OperandDataType.DataType1)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.OperandId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

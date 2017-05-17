@@ -1,0 +1,43 @@
+@model KpiManager.DataFieldRelationship
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<form asp-action="Edit">
+    <div class="form-horizontal">
+        <h4>DataFieldRelationship</h4>
+        <hr />
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <input type="hidden" asp-for="DataFieldRelationshipId" />
+        <div class="form-group">
+            <label asp-for="FieldSourceId" class="control-label col-md-2"></label>
+            <div class="col-md-10">
+                <select asp-for="FieldSourceId" class="form-control" asp-items="ViewBag.FieldSourceId"></select>
+                <span asp-validation-for="FieldSourceId" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="FieldTargetId" class="control-label col-md-2"></label>
+            <div class="col-md-10">
+                <select asp-for="FieldTargetId" class="form-control" asp-items="ViewBag.FieldTargetId"></select>
+                <span asp-validation-for="FieldTargetId" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+</form>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

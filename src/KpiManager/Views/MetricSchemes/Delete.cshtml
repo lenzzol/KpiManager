@@ -1,0 +1,70 @@
+@model KpiManager.MetricScheme
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>MetricScheme</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedBy)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CreatedBy)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CreatedDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ModifiedBy)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ModifiedBy)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ModifiedDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ModifiedDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.OperationOrder)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.OperationOrder)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.KpiStrategy)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.KpiStrategy.Description)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Metric)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Metric.Metric1)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Operator)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Operator.Operator1)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            <a asp-action="Index">Back to List</a>
+        </div>
+    </form>
+</div>

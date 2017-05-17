@@ -1,0 +1,81 @@
+@model KpiManager.DataField
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<form asp-action="Create">
+    <div class="form-horizontal">
+        <h4>DataField</h4>
+        <hr />
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+            <label asp-for="CreatedBy" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="CreatedBy" class="form-control" />
+                <span asp-validation-for="CreatedBy" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="CreatedDate" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="CreatedDate" class="form-control" />
+                <span asp-validation-for="CreatedDate" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="DataFieldName" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="DataFieldName" class="form-control" />
+                <span asp-validation-for="DataFieldName" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="DataFieldRelationshipId" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <select asp-for="DataFieldRelationshipId" class ="form-control" asp-items="ViewBag.DataFieldRelationshipId"></select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="DataNodeId" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <select asp-for="DataNodeId" class ="form-control" asp-items="ViewBag.DataNodeId"></select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="DataTypeId" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <select asp-for="DataTypeId" class ="form-control" asp-items="ViewBag.DataTypeId"></select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="ModifiedBy" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="ModifiedBy" class="form-control" />
+                <span asp-validation-for="ModifiedBy" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="ModifiedDate" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="ModifiedDate" class="form-control" />
+                <span asp-validation-for="ModifiedDate" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+</form>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

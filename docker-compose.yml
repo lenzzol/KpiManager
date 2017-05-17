@@ -1,0 +1,28 @@
+version: '2'
+
+services:
+
+
+   kpidb:
+     image: mysql:5.7
+     volumes:
+       - /home/docker-volumes/kpi-manager-db:/var/lib/mysql
+     restart: always
+     environment:
+       MYSQL_ROOT_PASSWORD: root
+       MYSQL_DATABASE: metric
+       MYSQL_USER: kpi
+       MYSQL_PASSWORD: root
+     ports:
+       - "3306:3306"
+
+   kpiapp:
+     depends_on:
+       - kpidb
+     build: .
+     environment:
+       - ASPNETCORE_ENVIRONMENT=staging
+     ports:
+       - "8085:5000"
+     restart: always
+

@@ -1,0 +1,77 @@
+@model IEnumerable<KpiManager.DataField>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.CreatedBy)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CreatedDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DataFieldName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ModifiedBy)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ModifiedDate)
+                </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataFieldRelationship)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataNode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataType)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedBy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataFieldName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ModifiedBy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ModifiedDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataFieldRelationship.DataFieldRelationshipId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataNode.NodeName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataType.DataType1)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.DataFieldId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.DataFieldId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.DataFieldId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
