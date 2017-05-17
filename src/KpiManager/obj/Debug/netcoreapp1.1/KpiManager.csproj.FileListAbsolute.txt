@@ -1,8 +1,0 @@
-/Users/lenzzolalvarez/Documents/code/github/KpiManager/src/KpiManager/bin/Debug/netcoreapp1.1/KpiManager.deps.json
-/Users/lenzzolalvarez/Documents/code/github/KpiManager/src/KpiManager/bin/Debug/netcoreapp1.1/KpiManager.runtimeconfig.json
-/Users/lenzzolalvarez/Documents/code/github/KpiManager/src/KpiManager/bin/Debug/netcoreapp1.1/KpiManager.runtimeconfig.dev.json
-/Users/lenzzolalvarez/Documents/code/github/KpiManager/src/KpiManager/bin/Debug/netcoreapp1.1/KpiManager.dll
-/Users/lenzzolalvarez/Documents/code/github/KpiManager/src/KpiManager/bin/Debug/netcoreapp1.1/KpiManager.pdb
-/Users/lenzzolalvarez/Documents/code/github/KpiManager/src/KpiManager/obj/Debug/netcoreapp1.1/KpiManager.AssemblyInfo.cs
-/Users/lenzzolalvarez/Documents/code/github/KpiManager/src/KpiManager/obj/Debug/netcoreapp1.1/KpiManager.dll
-/Users/lenzzolalvarez/Documents/code/github/KpiManager/src/KpiManager/obj/Debug/netcoreapp1.1/KpiManager.pdb
